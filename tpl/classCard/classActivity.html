@@ -1,0 +1,93 @@
+<div class="mlh_classNotice mlh_classActivity">
+	<!--班级信息特色活动列表 start-->
+	<div ng-if="variablePacket.type=='class'">
+		<!--标题 显示 start-->
+		<div class="title" ng-if='(variablePacket.range=="school"&&variablePacket.nav=="school") || variablePacket.range=="class"'>
+			<a href="javascript:;" ui-sref="secondNav.publicEdit({state:'classActivity',range:variablePacket.range})" >
+				<i class="iconfont icon-jiahao"></i>
+				创建活动
+			</a>
+		</div>	
+		<!--标题 显示 end-->
+		<!--列表显示 start-->
+		<div class="list">
+			<ul>
+				<li ng-repeat="i in variablePacket.schoolActivity">
+					<div class="gongshi_left">
+						<span class="gongshi activity">活动</span>
+						<a href="javascript:;" ui-sref="secondNav.publicDetails({id:i.id,state:'classActivity',title:i.title})" class="name" ng-bind="i.title"></a>
+					</div>
+					<time class="time" ng-bind="i.time"></time>
+					<div class="operation" ng-if='(variablePacket.range=="school"&&variablePacket.nav=="school") || variablePacket.range=="class"'>
+						<a href="javascript:;" ng-click="deleteData($index,'publicity',i.title,i.id)"><i class="iconfont icon-shanchu"></i>删除</a>
+						<a href="javascript:;" ui-sref="secondNav.publicEdit({name:'edit',state:'classActivity',id:i.id,range:variablePacket.range})"><i class="iconfont icon-bianji2"></i>编辑</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--列表显示 start-->
+	</div>
+	<!--班级信息特色活动列表 end-->
+	<!--学校信息学校活动列表 start-->
+	<div ng-if="variablePacket.type=='school'">
+		<!--标题显示 start-->
+		<div class="title" >
+			<a href="javascript:;" ui-sref="secondNav.publicEdit({state:'schoolActivity',range:variablePacket.range})">
+				<i class="iconfont icon-jiahao"></i>
+				创建活动
+			</a>
+		</div>
+		<!--标题显示 end-->
+		<!--列表显示 start-->
+		<div class="list schoolActivity">
+			<ul>
+				<li ng-repeat="i in variablePacket.schoolActivity">
+					<div class="gongshi_left">
+						<span class="gongshi activity">活动</span>
+						<a href="javascript:;" ui-sref="secondNav.publicDetails({id:i.id,state:'schoolActivity',title:i.title})" class="name" ng-bind="i.title"></a>
+					</div>
+					<div>
+						<time class="time" ng-bind="i.time"></time>
+						<span class="read"><em ng-bind="i.read"></em>已读</span>
+					</div>
+					<div class="operation">
+						<a href="javascript:;" ng-click="deleteData($index,'schoolActivity',i.title,i.id)"><i class="iconfont icon-shanchu"></i>删除</a>
+						<a href="javascript:;" ui-sref="secondNav.publicEdit({name:'edit',state:'schoolActivity',id:i.id,range:variablePacket.range})"><i class="iconfont icon-bianji2"></i>编辑</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--列表显示 end-->
+	</div>
+	<!--学校信息学校活动列表 end-->
+	
+	
+	<!--分页-->
+    <div class="zyx_reportPage wx_paging">
+		<div class="zyx_pagger-box zyx_pagger" id="page"></div>
+	</div>
+	<!--<script type="text/javascript">
+		$('#page').paging({
+			initPageNo: 1, // 初始页码
+			totalPages: 5, //总页数
+			slideSpeed: 500, // 缓动速度。单位毫秒
+			jump: false, //是否支持跳转
+			callback: function(page) { // 回调函数
+				$.ajax({
+					type: "GET",
+					url: "",  //数据接口
+					success: function(data) {
+						//相关事件
+					}
+				});
+			}
+		})
+	</script>-->
+    
+    <!--确认框及提示框-->
+	<prompt-box variable-packet="variablePacket" prompt-show="promptShow" wran-show="wranShow" del-ok="delOk"></prompt-box>
+
+    
+
+</div>
+

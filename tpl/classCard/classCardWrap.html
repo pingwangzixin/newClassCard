@@ -1,0 +1,12 @@
+<div style="border-bottom: 1px solid #ddd;">
+	<div class="zmj_classCardback">
+		           <span ng-click="cancel()"><i class="iconfont icon-web__bitebizuojiantou"></i>返回</span>
+	        </div>
+	<div class="zmj_classCardtitle">
+		<span>班牌管理</span>
+	</div>
+	<div class="zyx_classCardWrap">
+		<span ng-repeat='i in variablePacket.rangeData' ng-bind='i.name' ui-sref="{{i.url}}" ui-sref-active="active"></span>
+	</div>
+</div>
+<div ui-view></div>

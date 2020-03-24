@@ -1,0 +1,79 @@
+<div class="zy_class_card_admin  zmj_class_card_admin">
+    <div class="zmj_classCardback">
+		 <span ng-click="cancel()"><i class="iconfont icon-web__bitebizuojiantou"></i>返回</span>
+	</div>
+	<div class="zmj_classCardtitle">
+		 <span>班牌管理</span>
+	</div>
+	<div class="zyx_greenbox zyx_classPhotoEdit">
+		<div class="zyx_whitebox">
+			<!--<div class="zyx_title">
+				<span>学校风采</span>
+			</div>-->
+			<div class="zyx_classSpace_editfile">
+				<div class="zyx_name">
+					<span>文件名称</span>
+					<input type="text" ng-model="photoName" placeholder="请输入文件名称"/>
+					<b ng-if="(myForm.taskName.$error.required && myForm.taskName.$touched  ) || variablePacket.ProvingTaskname">
+								<i class="iconfont icon-gantanhao"></i>
+								<span>请输入文件名称</span>
+					</b>	
+				</div>
+				<!--<div class="zyx_edit">
+					<span style="vertical-align: 192px;">文件描述</span>
+					<div class="fr ueditor"  ng-model='ueditor'></div>
+					<textarea name="" rows="" ng-model="photoDesc" cols=""></textarea>
+					<b ng-if="(myForm.selectDate.$error.required&&myForm.selectDate.$touched) || variablePacket.ProvingDate">
+								<i class="iconfont icon-gantanhao"></i>
+								<span>请输入文件描述</span>
+					</b>
+				</div>-->
+				<div class="zyx_file zy_photo_operation clearfix">
+					<span class="fl">上传照片</span>
+					<!--上传成功以后的回显-->
+					<ul class="zyx_echo_img fl"> 
+						<li ng-repeat="photo in photoArr">
+           					<img src="{{photo.src}}" err-src="./img/error94.png" ng-click="photoEnlarge($index)">
+							<!--<img src="./img/{{photo.src}}"/>-->
+							<span ng-click="deletePhoto($index,photo.id)"><i class="iconfont icon-shanchu"></i> 删除</span>
+						</li>
+						<li>
+							<input type="file" name="" id="FileInput" value="" onchange="angular.element(this).scope().filePhoto(this)"/>
+							<img src="./img/upload_school_logo.png"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="zyx_classSpace_btn">
+				<span ng-click="save(ueditor)">保存</span>
+				<span ng-click="cancel()">取消</span>
+			</div>
+		</div>
+	</div>
+	
+	<!--照片查看大图-->
+	<div class="gy_del_down zy_photo_enlarge" ng-if="variablePacket.photoBox">
+	    <div class="gy_hide"></div>
+	    <div class="gy_con">
+	    	<div class="zy_photo_show_details">
+	    		<i class="iconfont icon-guanbi" ng-click="variablePacket.photoBox=false"></i>
+				<div class="zy_album_pic_big">
+					<i class="iconfont icon-zuojiantoubeijing" ng-show="variablePacket.leftBtn"></i>
+					<div class="zy_pic_big_box">
+						<ul class="clearfix">
+							<!--<li ng-repeat="photo in photoArr" view-photo repeat-finish="aaa()">-->
+							<li ng-repeat="photo in photoArr" view-photo>
+								<img ng-src="./img/{{photo.src}}"/>
+							</li>
+						</ul>
+					</div>
+					<i class="iconfont icon-youjiantoubeijing" ng-show="variablePacket.rightBtn"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--确认框及提示框-->
+	<prompt-box variable-packet="variablePacket" prompt-show="promptShow" wran-show="wranShow" del-ok="delOk"></prompt-box>
+	
+</div>

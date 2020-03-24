@@ -1,0 +1,40 @@
+<ul class="zyx_classCardSecondNav" ng-if='variablePacket.nav=="school"'>
+	<li>
+		<em>学校：</em>
+		<span>{{officeName}}</span>
+	</li>
+	<li class="clearfix">
+		<em class="fl">类型：</em>
+		<div class="fl">
+			<span ng-repeat='i in schoolTypeData' ng-bind='i.name' ui-sref="{{i.url}}" ui-sref-active="active"></span>
+		</div>
+	</li>
+</ul>
+
+<ul class="zyx_classCardSecondNav" ng-if='variablePacket.nav=="class"'>
+	<li>
+		<em>学校：</em>
+		<span>{{officeName}}</span>
+	</li>
+	<li class="clearfix">
+		<em class="fl">年级：</em>
+		<span ng-if='variablePacket.range=="class"' ng-bind="userObj.gradeName"></span>
+		<div  ng-if='variablePacket.range=="school"'>
+			<span ng-repeat='i in gradeData' ng-bind='i.name' ng-class='{"active":variablePacket.classGrade==$index}' ng-click='gradeTab($index,i.name)'></span>
+		</div>
+	</li>
+	<li class="clearfix">
+		<em class="fl">班级：</em>
+		<span ng-if='variablePacket.range=="class"' ng-bind="userObj.className"></span>
+		<div class="fl"   ng-if='variablePacket.range=="school"'>
+			<span ng-repeat='i in classData' ng-bind='i.name' ng-class='{"active":variablePacket.classClass==$index}' ng-click='classTab($index,i.id)'></span>
+		</div>
+	</li>
+	<li class="clearfix">
+		<em class="fl">类型：</em>
+		<div class="fl">
+			<span ng-repeat='i in classTypeData' ng-bind='i.name' ui-sref="{{i.url}}" ui-sref-active="active"></span>
+		</div>
+	</li>
+</ul>
+<div ui-view></div>

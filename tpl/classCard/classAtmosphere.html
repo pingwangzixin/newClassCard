@@ -1,0 +1,40 @@
+<div>
+	
+	<div class="zmj_atmosphere_content">
+		  <div class="zmj_atmosphere_show" ng-if="variablePacket.showState">
+		  		<p class="zmj_atmosphere_title clearfix">
+		  			<!--<span>班风:不是尽力而为，而是全力以赴</span>-->
+		  			<span ng-bind="variablePacket.text"></span>
+		  			<span ng-click="edit()"  ng-if='(variablePacket.range=="school"&&variablePacket.nav=="school") || variablePacket.range=="class"' class="operation">
+		  				<i class="iconfont icon-bianji"></i>编辑
+		  			</span>
+		  		</p>
+		  		
+		  		<div class="zmj_atmosphere_img">
+		  			<img class="image" ng-src="{{variablePacket.imageSrc}}" alt="" />
+		  			 <!--<img src="img/classmottoImg.jpg" alt="" />	-->
+		  		</div>
+		  </div>
+		  <div class="zmj_atmosphere_editfile" ng-if="variablePacket.editState">
+				<div class="zmj_file clearfix">
+					<span class="fl">上传照片</span>
+					<div class="zmj_echo_img fl"> 
+						<img id='FileImg' src=" "/>
+					</div>
+					<div class="zmj_fileInput fl clearfix">
+						<input type="file" id='FileInput'  accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" onchange="angular.element(this).scope().filePhoto(this)" />
+						<img src="./img/upload_school_logo.png" class="fl"/>
+						<span ng-if="variablePacket.imgError"><i class="iconfont icon-gantanhao"></i><em>请上传照片</em></span>
+					</div>
+				</div>
+				<div class="zmj_edit clearfix">
+					<span class="fl">文字内容</span>
+					<textarea ng-model="variablePacket.text" ng-keyup="textBlur()"></textarea>
+					<span class="hint" ng-if="variablePacket.textError"><i class="iconfont icon-gantanhao"></i><em>请填写内容</em></p>
+			    </div>
+			    <div class="zmj_save">
+			    	 <button ng-click="save(variablePacket.text)">保存</button>
+			    </div>
+		 </div>
+	</div>
+</div>

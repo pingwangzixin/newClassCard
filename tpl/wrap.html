@@ -1,0 +1,66 @@
+<template-set class="toggle" ng-if="showAdmin"></template-set>
+<!--<div class="template-set"></div>-->
+<!--<system></system>-->
+<div class="zy_index">
+    <div class="zy_head">
+        <header class="clearfix">
+            <div class="zy_head_logo fl">
+                <p class="zy_double_box">
+                	<img ng-repeat="logo in pcLogo" ng-src="{{newsIp+logo.path}}" alt="" />
+                </p>
+                <p class="zy_single_box">
+                	<img ng-src="{{newsIp+pcLogo[0].path}}" alt="" ui-sref="wrap.index" />
+                </p>
+            </div>
+            
+			<!--<div class="fr zyx_my-space" ng-if="!firstNav">
+				<i class="iconfont icon-shouye"></i>
+				<span>我的空间</span>
+			</div>-->
+            
+            <ul class="zy_head_group fl" ng-if="firstNav">
+                <!--<li ui-sref="{{column.href}}" ui-sref-active="active" ng-repeat="column in pcColumn track by $index" ng-bind="column.name">首页</li>-->
+                <li ui-sref="{{column.href}}" ui-sref-active="active" ng-repeat="column in pcColumn" ng-show="column.checked" ng-bind="column.name">首页</li>
+            </ul>
+            <div class="zy_users fr" ng-hide="loggedIn">
+            	<img src="./img/zy_user.png" alt="" />
+            	<span ui-sref="login">登录</span>
+            	<!--<span ui-sref="register">注册</span>-->
+            </div>
+            <div class="zy_users zy_after_login fr" ng-show="loggedIn">
+            	<div class="zy_after_login_info">
+            		<!--<i ng-bind="userLoggedMsg.surname"></i>-->
+            		<img onerror="this.src='./img/Class.png'" ng-src="{{userLoggedMsg.userFace}}" alt="" />
+            		<div class="zy_user_info_box">
+            			<p class="zy_triangle_box"><i></i></p>
+            			<ul>
+            				<li ng-bind="userLoggedMsg.realname">王大天老师</li>
+            				<li class="zy_icon_role" ng-show="rolesShow">
+            					<i class="iconfont icon-daohanglan-05"></i>
+            					<span ng-repeat="role in roles|unique" ng-bind="role.roleName" ng-class="{'active':role.checked}" ng-click="roleSwitch($index,$event)"></span>
+            				</li>
+            				<li class="zy_icon_space" ng-show="spaceShow" ui-sref="secondNav.homePage">
+            					<i class="iconfont icon-txspace2f"></i>
+            					我的空间
+            				</li>
+            				<li class="zy_icon_account" ng-click="myAccount()">
+            					<i class="iconfont icon-book"></i>
+            					我的账户
+            				</li>
+            				<!--<li>系统设置</li>-->
+            				<li class="zy_icon_out" ng-click="loginOut()">
+            					<i class="iconfont icon-logout"></i>
+            					退出
+            				</li>
+            			</ul>
+            		</div>
+            	</div>
+            	<span ng-bind="userLoggedMsg.realname">王大天老师</span>
+            	
+            </div>
+        </header>
+    </div>
+    
+    <div ui-view class="toggle"></div>
+    
+</div>

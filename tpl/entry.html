@@ -1,0 +1,52 @@
+<style>
+	body,
+	.zy_view{
+		background: #fff;
+		min-width: 1350px;
+	}
+</style>
+<div class="mlh_login">
+	<div class="mlh_top">
+		<a href="javascript:;"><img src="img/mlh_mdj_logo.png"/></a>
+		<a href="javascript:;"><img src="img/mlh_jcwl_log.png"/></a>
+	</div>
+	<div class="mlh_loginCont">
+		<div class="mlh_rightLogin">
+			<div class="mlh_rigthL">
+				<img src="img/mlh_title.png" class="mlh_titPic">
+				<div class="mlh_dl">
+					<div class="mlh_user_login"> 
+						<span>用户登录</span>
+						<p class="mlh_input">
+						<input type="text" placeholder="请输入用户账号" ng-model="userInfo.userName" />
+						<label class="user"></label>
+						</p>
+						<p class="mlh_input">
+						<input type="password" placeholder="请输入密码" ng-model="userInfo.passWord" />
+						<label class="password"></label>
+						</p>
+						<!-- <p class="mlh_input">
+							<input type="text" id="code_input" placeholder="输入验证码" class="yzm" />
+							<i id="v_container"></i>
+						</p> -->
+						<p class="mlh_input">
+							<button class="mlh_login_btn" id="my_button" ng-click="loginA()">点击进入</button>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <script>
+	var verifyCode = new GVerify("v_container");
+	document.getElementById("my_button").onclick = function(){
+		var res = verifyCode.validate(document.getElementById("code_input").value);
+		 
+		if(res){
+			alert("验证正确");
+		}else{
+			alert("验证码错误");
+		}
+	}
+</script> -->

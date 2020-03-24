@@ -1,0 +1,59 @@
+<div>
+	<div class="zmj_starStudent_content">
+		<div class="zmj_atmosphere_show clearfix" ng-if="variablePacket.showState">
+			<p class="zmj_atmosphere_title clearfix">
+				明星同学
+				<span ng-click="edit()" ng-if='variablePacket.range=="class"' class="operation">
+					<i class="iconfont icon-jiahao"></i>添加
+				</span>
+			</p>
+			<div class="zmj_starStudent_list">
+                  <div class="zmj_starStudent_info" ng-repeat="i in variablePacket.starStudent">
+                 	<dl class="clearfix">
+                 		<dt><img ng-src="{{i.img}}" alt="" /></dt>
+                 		<dd>
+                 			<p class="clearfix">
+                 				<span ng-bind="i.name"></span>
+                 				<b ng-if='variablePacket.range=="class"'>
+                 					<span ng-click="edit(i.id)">
+                 						<i class="iconfont icon-bianji"></i>编辑
+                 					</span>
+                 					<span ng-click="Del($index,i.id)">
+                 						<i class="iconfont icon-shanchu"></i>删除
+                 					</span>
+                 				</b>
+                 			</p>
+                 			<div ng-bind="i.content">
+                 					
+                 			</div>
+                 		</dd>
+                 	</dl>
+                 </div>
+			</div>
+		</div>
+        <div class="zmj_atmosphere_editfile" ng-if="variablePacket.editState">
+			    <div class="zmj_master_text"><span>学生姓名</span><input type="text" placeholder="请输入学生姓名" ng-model="variablePacket.name" ng-keyup="nameBlur()" /><span ng-if="variablePacket.nameError"><i class="iconfont icon-gantanhao"></i><em>请输入学生姓名</em></span></div>
+				<div class="zmj_file zmj_master_file clearfix">
+					<span class="fl">上传照片</span>
+					<div class="zmj_echo_img fl"> 
+						<img id='FileImg' src=" "/>
+					</div>
+					<div class="zmj_fileInput fl clearfix">
+						<input type="file" id='FileInput'  accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"  onchange="angular.element(this).scope().filePhoto(this)"/>
+						<img src="./img/upload_school_logo.png" class="fl"/>
+						<span ng-if="variablePacket.imgError"><i class="iconfont icon-gantanhao"></i><em>请上传照片</em></span>
+					</div>
+				</div>
+				<div class="zmj_edit clearfix">
+					<span class="fl">学生介绍</span>
+					<textarea ng-model="variablePacket.text" ng-keyup="textBlur()"></textarea>
+					<span class="hint" ng-if="variablePacket.textError"><i class="iconfont icon-gantanhao"></i><em>请填写内容</em></p>
+			    </div>
+			    <div class="zmj_save">
+			    	 <button ng-click="save(variablePacket.text)">保存</button>
+			    </div>
+		 </div>
+	</div>
+	<!--删除框-->
+    <prompt-box variable-packet="variablePacket" prompt-show="promptShow" wran-show="wranShow" del-ok="delOk"></prompt-box>
+</div>

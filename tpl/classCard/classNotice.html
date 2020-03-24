@@ -1,0 +1,51 @@
+<div class="mlh_classNotice">
+	<!--标题显示 start-->
+	<div class="title"  ng-if='(variablePacket.range=="school"&&variablePacket.nav=="school") || variablePacket.range=="class"'>
+		<a href="javascript:;" ui-sref="secondNav.publicEdit({state:'classNotice',range:variablePacket.range})">
+			<i class="iconfont icon-jiahao"></i>
+			创建班务公示
+		</a>
+	</div>
+	<!--标题显示 start-->
+	<!--列表显示 start-->
+	<div class="list" ng-repeat="i in variablePacket.publicity">
+		<ul>
+			<li>
+				<div class="gongshi_left">
+					<span class="gongshi">公示</span>
+					<a href="javascript:;" ui-sref="secondNav.publicDetails({id:i.id,state:'classNotice',title:i.title})" class="name" ng-bind="i.title"></a>
+				</div>
+				<time class="time" ng-bind="i.time"></time>
+				<div class="operation"  ng-if='(variablePacket.range=="school"&&variablePacket.nav=="school") || variablePacket.range=="class"'>
+					<a href="javascript:;" ng-click="deleteData($index,'publicity',i.title,i.id)"><i class="iconfont icon-shanchu"></i>删除</a>
+					<a href="javascript:;" ui-sref="secondNav.publicEdit({name:'edit',state:'classNotice',id:i.id,range:variablePacket.range})"><i class="iconfont icon-bianji2"></i>编辑</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!--标题显示 end-->
+	<!--分页--> 
+	<!--分页-->
+    <div class="zyx_reportPage wx_paging">
+		<div class="zyx_pagger-box zyx_pagger" id="page"></div>
+	</div>
+	<script type="text/javascript">
+		$('#page').paging({
+			initPageNo: 1, // 初始页码
+			totalPages: 5, //总页数
+			slideSpeed: 500, // 缓动速度。单位毫秒
+			jump: false, //是否支持跳转
+			callback: function(page) { // 回调函数
+				$.ajax({
+					type: "GET",
+					url: "",  //数据接口
+					success: function(data) {
+						//相关事件
+					}
+				});
+			}
+		})
+	</script>
+    <!--确认框及提示框-->
+	<prompt-box variable-packet="variablePacket" prompt-show="promptShow" wran-show="wranShow" del-ok="delOk"></prompt-box>
+</div>

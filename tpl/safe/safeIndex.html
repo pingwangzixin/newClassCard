@@ -1,0 +1,90 @@
+<div class="mlh_safeWrapper">
+	<!--标题导航 start-->
+	<div class="safe_title">
+		<i></i>安全管理
+	</div>
+	<!--标题导航 end-->
+	<!--内容 start-->
+	<div class="mlh_sateIndex clearfix">
+		<!--今日出勤情况 start-->
+		<div class="cont left">
+			<p class="title">今日出勤情况</p>
+
+			<ul class="pie clearfix">
+				<li class="fl">
+					<div class="pieSolid" style="width: 145px;height: 145px;"></div>
+					<p>考勤正常学生</p>
+				</li>
+				<li class="fl">
+					<div ng-hide="variablePacket.late==0" class="pieSolid1" style="width: 145px;height: 145px;"></div>
+					<div ng-if="variablePacket.late==0" style="width: 145px;height: 145px; position: relative;">
+						<div class="nodata">0</div>
+					</div>
+					<p>缺勤学生</p>
+				</li>
+				<li class="fl">
+					<div class="pieSolid2" style="width: 145px;height: 145px;"></div>
+					<p>迟到学生</p>
+				</li>
+				<li class="fl">
+					<div class="pieSolid3" style="width: 145px;height: 145px;"></div>
+					<p>早退学生</p>
+				</li>
+			</ul>
+
+		</div>
+		<!--今日出勤情况 end-->
+		<!--历史出勤率 start-->
+		<div class="right">
+			<p class="title">历史出勤率</p>
+			<!--数据表-->
+			<div class="chart_line_user charts-btb" style="width:555px; height: 210px; margin: 0 auto; margin-top:30px; margin-left:-20px; position: relative;"></div>
+		</div>
+		<!--历史出勤率 end-->
+	</div>
+	<div class="mlh_safetop mlh_safeCont clearfix">
+		<!--今日情况 搜索  start-->
+		<p class="title">今日出勤统计表</p>
+		<div class="search clearfix">
+			<!--今日情况 start-->
+			<div class="time">
+				<p ng-repeat="i in todayData">
+					
+					<span ng-bind="i.name" "></span>
+					
+					<span ng-bind="i.startTime"></span>-<span ng-bind="i.endTime"></span>
+				</p>
+			</div>
+			<!--今日情况 end-->
+		</div>
+		<!--今日情况 搜索  end-->
+		<!--统计表 start-->
+		<div class="wx_userstatics_table mlh_safeTab">
+			<table class="mlh_table_userstic">
+				<thead>
+					<tr>
+						<th>时间</th>
+						<th>姓名</th>
+						<th>行为</th>
+						<th>表现</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="i in studentData">
+						<td ng-bind="i.time"></td>
+						<td   ui-sref='personSafe({stuId:i.stuId})' ng-bind="i.stuName"></td>
+						<td ng-bind="i.behavior"></td>
+						<td ng-bind="i.type" class="normal" ng-class="{'abnormal':i.performance!='正常'}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--统计表 end-->
+		<!--更多 start-->
+		<!--<div class="more">
+			<a href="javascript:;" ui-sref='secondNav.safeMore'>更多<i class="iconfont icon-arrow_you"></i></a>
+		</div>-->
+		<!--更多 end-->
+	</div>
+	<!--内容 end-->
+</div>

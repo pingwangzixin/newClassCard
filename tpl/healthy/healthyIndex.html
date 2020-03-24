@@ -1,0 +1,76 @@
+<div class="mlh_safeWrapper">
+	<!--标题导航 start-->
+	<div class="safe_title">
+		<i></i>健康管理
+	</div>
+	<!--标题导航 end-->	
+	<div class="mlh_sateIndex clearfix">
+		<!--心率 start-->
+		<div class="heart left">
+			<p class="title">心率</p>
+			<img src="./img/mlh_heart.png">
+			<ul>
+				<li ng-repeat="i in Normal">
+					<!--<span><em ng-bind="i.num"></em>次</span>-->
+					<p ng-bind="i.state">心率过缓(<40)</p>
+					<p>(<em ng-bind="i.name">王丽丽</em>)</p>
+					
+				</li>
+			</ul>
+			
+			
+			
+			
+		</div>
+		<!--心率 end-->
+		<!--步数 start-->
+		<div class="step right">
+			<p class="title">步数</p>
+			<ul class="clearfix">
+				<li class="pic"><img src="./img/mlh_foot.png"></li>
+				<li class="text">
+					<p><span ng-bind="jintianbushu">10095</span>步</p>
+					<p>今日平均步数</p>
+				</li>
+				<li class="data">
+					<div class="chart_line_user charts-btb" style="width:400px; height: 180px; margin: 0 auto; position: relative;"></div>
+				</li>
+			</ul>
+		</div>
+		<!--步数 end-->
+	</div>
+	<div class="mlh_safetop mlh_safeCont clearfix" ng-controller="tableAreaCtrl as tableArea">
+		<!--班级统计表  start-->
+		<p class="title top">班级统计表</p>
+		<!--班级统计表  end-->
+		<!--统计表 start-->
+		<div class="wx_userstatics_table mlh_safeTab">
+			<table class="mlh_table_userstic" datatable="ng" dt-options="tableArea.dtOptions">
+				<thead>
+					<tr>
+						<th>国籍号</th>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>心率</th>
+						<th>步数</th>
+						<th>血压</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="i in classData">
+						<td ng-bind="i.stuNo" style="width: 265px;">G231004200703010017</td>
+						<td ng-bind="i.stuName">张三</td>
+						<td ng-bind="i.sex">女</td>
+						<td>
+							<span ng-bind="i.heartRate"></span>
+							<img ng-src={{i.state}} class="mlh_arrow">
+						</td>
+						<td ng-bind="i.pedometer">165</td>
+						<td ng-bind="i.sdp">165</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--统计表 end-->
+	</div>
+</div>

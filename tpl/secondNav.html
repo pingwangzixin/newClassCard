@@ -1,0 +1,17 @@
+<!--<system nav="navShowDet"></system>-->
+<!--<system></system>-->
+<div class="zmj_headwrap">
+	<div class="zmj_headtop clearfix">
+		 <a href="{{tzdlIp}}" class="logo fl"><img src="img/logo.png"/></a>
+		 <div class="zmj_headcontent fr">
+		 	 <span ng-bind="variablePacket.surname" class="surname"></span>
+		 	 <span ng-bind="variablePacket.name" class="name"></span>
+		 	 <div class="state">
+		 	 	<span>[已登录]</span>
+		 	 	<span class="quit" ng-click="logOut()"><img src="img/mlh_tuichu.png" alt="" /><b>退出登录</b></span>
+		 	 </div>
+		 </div>
+	</div>
+</div>
+<div ui-view class="toggle mlh_content zyx_wrapBox"></div>
+<z-footer></z-footer>

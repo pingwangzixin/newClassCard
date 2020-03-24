@@ -1,0 +1,103 @@
+<div class="mlh_right mlh_publicDetails zmj_right">
+
+	<!--表单显示 start-->
+	<div class="zmj_publicDetails">
+		<div class="zmj_classCardback">
+		        <span ng-click="cancel()"><i class="iconfont icon-web__bitebizuojiantou"></i>返回</span>
+	    </div>
+		<div class="zmj_classCardtitle">
+				<span>班牌管理</span>
+		</div>
+		 <div class="list details">
+				<form name="myForm" novalidate >
+					<ul class="zyx_case mlh_case zyx_guide_case">
+						<li>
+							<em ng-if="variablePacket.state=='classNotice'">公示名称<i class="star">*</i></em>
+							<em ng-if="!(variablePacket.state=='classNotice')">活动名称<i class="star">*</i></em>
+							<input ng-if="variablePacket.state=='classNotice'" type="text" class="editName" name="taskName" placeholder="请输入公示名称" ng-keyup='mlh_taskName()'  ng-model="variablePacket.taskName" required />
+							<input ng-if="variablePacket.state=='classActivity' || variablePacket.state=='schoolActivity'" type="text" class="editName" name="taskName" placeholder="请输入活动名称" ng-keyup='mlh_taskName()'  ng-model="variablePacket.taskName" required />
+							<b ng-if="(myForm.taskName.$error.required && myForm.taskName.$touched  ) || variablePacket.ProvingTaskname">
+								<i class="iconfont icon-gantanhao"></i>
+								<span>请输入活动名称</span>
+							</b>				
+						</li>
+						<li class="mlh_height">
+							<em ng-if="variablePacket.state=='classNotice'">选择时间<i class="star">*</i></em> 
+							<em ng-if="!(variablePacket.state=='classNotice')">活动时间<i class="star">*</i></em> <!--ng-focus="ChangeDate()"-->
+							<input type="text" name="selectDate" readonly="readonly" value="" placeholder="请选择活动时间" id="time" ng-click='sss()' ng-focus="ChangeDate()"  class="timer wx_datapinkrange"  ng-model="variablePacket.selectDate" required/>
+							<b ng-if="variablePacket.inputVal">
+								<i class="iconfont icon-gantanhao"></i>
+								<span>请选择活动时间 </span>
+								<input style="display: none;" id = "yts" ng-click="clickyts()"></input>
+							</b>	
+						</li>
+						<li class="clearfix">
+							<em class="fl" ng-if="variablePacket.state=='classNotice'">公示内容<i class="star">*</i></em>
+							<em class="fl" ng-if="variablePacket.state=='classActivity'">活动内容<i class="star">*</i></em>
+							<em class="fl" ng-if="variablePacket.state=='schoolActivity'">活动要求<i class="star">*</i></em>
+							<textarea name='taskCont' class="task_cont" ng-model="variablePacket.taskCont" ng-keyup='mlh_taskCont()' required></textarea>
+						    <b ng-if="(myForm.taskCont.$error.required&& myForm.taskCont.$touched) || variablePacket.ProvingTaskcont">
+								<i class="iconfont icon-gantanhao"></i>
+								<span>请填写内容</span>
+							</b>
+						</li>
+					</ul>
+				</form>
+				<!-- 上传附件 start -->
+				<div class="zyx_guide_case mlh_upload" ng-if='variablePacket.UploadFile_show'>
+					<ul class="clearfix">
+						<li ng-repeat="i in variablePacket.uploadFile">
+							<img src="./img/resources_word.png" ng-if='i.ResourceSrc==i.ResourceNum'/>
+							<!--<img src="./img/resources_ppt.png" ng-if='i.ResourceSrc==1'/>
+							<img src="./img/resources_pic.png" ng-if='i.ResourceSrc==2'/>
+							<img src="./img/resources_mp4.png" ng-if='i.ResourceSrc==3'/>
+							<img src="./img/resources_ear.png" ng-if='i.ResourceSrc==4'/> -->
+							<span ng-bind='i.name' ng-if='i.ResourceSrc==i.ResourceNum'></span>
+							<!--<span ng-bind='i.name' ng-if='i.ResourceSrc==1'></span>
+							<span ng-bind='i.name' ng-if='i.ResourceSrc==2'></span>
+							<span ng-bind='i.name' ng-if='i.ResourceSrc==3'></span>
+							<span ng-bind='i.name' ng-if='i.ResourceSrc==4'></span>-->
+							<em ng-click='uploadFile(i.ResourceNum,$index,i.name)'>删除</em>					
+
+					</ul>					
+				</div>
+				<!--<div class="edit_addFile">
+					<strong class="mlh_add" ng-class={"active":variablePacket.UploadFile_show}><i class="iconfont icon-lianjielianlu"></i> 添加附件<input type="file" onchange="angular.element(this).scope().fileUpload(this)"> </strong>
+				</div>-->
+				<!--上传附件 end-->
+				<button class="edit_button" ng-click="Verification(myForm.$valid,myForm)">保存</button>
+	    </div>
+		
+    </div>
+	<!--表单显示 end-->
+</div>
+<!--确认框及提示框-->
+<prompt-box variable-packet="variablePacket" prompt-show="promptShow" wran-show="wranShow" del-ok="delOk" mask-zindex='variablePacket.maskZindex'></prompt-box>
+
+
+
+<!-- 双日历代码 start -->
+<script>
+	    var time = new Date();
+		var nian = time.getFullYear();
+		var yue  = time.getMonth()+1;
+		var ri  = time.getDate();
+		var times = yue+"/"+ri+"/"+nian
+		var endDate = yue+1+"/"+ri+"/"+nian
+		console.log(times)
+		//time.toDateString();
+		$(function() {
+			$('.timer').daterangepicker({
+
+					    "endDate": endDate,
+					    "minDate": times,
+					    "maxDate": "12/12/2020",//不包括12号
+	                    "format": 'MM/DD/YYYY'
+	                 }, function(start, end, label) {
+	                   $('.timer').val(start.format('YYYY-MM-DD') + '至' + end.format('YYYY-MM-DD'));
+					   $('.timer').focus();
+					   $(".daterangepicker").hide();
+	            });
+		});
+</script>
+<!-- 双日历代码 end -->

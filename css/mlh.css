@@ -1,0 +1,809 @@
+.mlh_noborder{
+	border:none;
+}
+.mlh_content{
+	margin:0 auto;
+	margin-top:20px;
+	width:1200px;
+}
+.mlh_right .list{
+	width: 100%;
+	height: auto;
+	min-height: 600px;
+	_height:600px;
+	padding-bottom: 20px;
+	color: #4f5355;
+	background: #fff;
+	border-radius: 5px;
+}
+/*领导端 详情页面*/
+.mlh_right .title{
+	padding-bottom: 15px;
+	width: 100%;
+	font-size: 16px;
+	color: #1470bf;
+	border-bottom: 1px solid #ddd;
+}
+.mlh_right .title i{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 20px;
+}
+.mlh_right .pointer{
+	cursor: pointer;
+}
+.mlh_right .details{
+	box-sizing: border-box;
+	padding:10px 20px;
+	font-size: 14px;
+	color: #282a2c;
+}
+/* 教师端任务内容 */
+.mlh_content .decorate{
+	margin-left: 30px;
+	line-height: 54px;
+	font-size: 16px;
+	color: #1479bf;
+}
+.mlh_content .task_cont{
+	width: 100%;
+	height: 283px;
+	line-height: 1.5;
+	border-radius: 5px;
+}
+.mlh_case li>strong.mlh_add{
+	position: relative;
+	display: inline-block;
+    margin-left: 5px;
+    width: 124px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #4f5355;
+    font-style: normal;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.mlh_case li>strong:hover,
+.mlh_case li>strong.active{
+	display: inline-block;
+    margin-left: 5px;
+    width: 124px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #399fdf;
+    font-style: normal;
+    text-align: center;
+    border: 1px solid #399fdf;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.mlh_case li span{
+	font-size: 12px;
+	font-weight: normal;
+}
+.mlh_height {
+	margin-top: -16px;
+}
+.mlh_height #time{
+	width: 295px;
+	font-size: 14px;
+	background: url(../img/mlh_date.png) no-repeat 260px center;
+	cursor: pointer;
+}
+.mlh_add input{
+	position: absolute; 
+	top:0;
+	left: 0;
+	width: 124px;
+	height: 32px;
+	border: 1px solid #1479bf;
+	filter:alpha(opacity=0);
+	opacity: 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+.mlh_upload{
+	margin:0 auto;
+	margin-top: -10px;
+	width:1140px;
+}
+.mlh_upload li{
+	display: flex;
+	align-items: center;
+	float: left;
+	margin-bottom:10px;
+	margin-right: 32px;
+	width: 348px;
+	height: 30px;
+	line-height: 30px;
+	background: #e2f1fa;
+}
+.mlh_upload li img{
+	padding:0 10px;
+}
+.mlh_upload li span{
+	display: inline-block;
+	width: 260px;
+	color: #4f5355;
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	white-space: nowrap;
+}
+.mlh_upload li em{
+	display: inline-block;
+	padding-left:10px;
+	color: #1479bf;
+	cursor: pointer;
+}
+.mlh_taskcont{
+	padding:40px 50px;
+	line-height: 2.5;
+}
+.mlh_taskcont p{
+	text-indent: 2em;
+}
+.mlh_taskPic{
+	padding:10px;
+}
+.mlh_taskPic img{
+	width: 100%;
+	height: auto;
+}
+.mlh_taskPic em{
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-style: normal;
+}
+.mlh_case{
+	margin-top:16px;
+}
+.mlh_case li{
+	position: relative;
+	line-height:50px;
+}
+.mlh_case li>input[type=text].mlh_hide{
+	position: absolute;
+	top:-15px;
+ 	border:none;
+ 	background-color: transparent;
+ 	outline: none;
+ 	z-index: 0;
+ 	cursor: pointer;
+}
+.mlh_case li>small{
+	position: relative;
+	z-index: 0;
+}
+/*牡丹江登录页面 */
+.mlh_login input,
+.mlh_login button{
+	outline: none;
+}
+.mlh_login{
+	width: 100%;
+	height: auto;
+}
+.mlh_top{
+	margin:0 auto;
+	background: #fff;
+}
+.mlh_top a{
+	display:inline-block;
+	padding-top:10px;
+	margin-right:50px;
+}
+.mlh_loginCont{
+	width: 100%;
+	background-image: url(../img/mlh_mdjLogin_bj.jpg);
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-size: cover; 
+	height: 842px;
+}
+.mlh_rightLogin{
+	padding-top:120px;
+	margin:0 auto;
+	width: 1350px;
+	height: 390px;
+}
+.mlh_rigthL{
+	float: right;
+	width: 520px;
+}
+.mlh_rightLogin img.mlh_titPic{
+	display: block;
+	margin:0 auto;
+	width: 351px;
+}
+.mlh_dl{
+	margin-top: 35px;
+	width: 518px;
+	height: 388px;
+	background: #fff;
+	border:1px solid #147abf;
+}
+.mlh_user_login{
+	margin:0 auto;
+	margin-top:30px;
+	width: 382px;
+}
+.mlh_user_login span{
+	font-size: 18px;
+	height:58px;
+	line-height: 58px;
+}
+.mlh_input{
+	position: relative;
+	margin-bottom: 20px;
+	width: 382px;
+	height: 50px;
+}
+.mlh_input input{
+	box-sizing: border-box;
+	padding-left:55px;
+	width: 380px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #818484;
+	border:1px solid #7e8686;
+}
+.mlh_input input:focus{
+	border-color: #147abf;
+}
+.mlh_input label{
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: 48px;
+	height: 48px;
+}
+.mlh_input label.user{
+	background: url(../img/mlh_mdj_name.png) no-repeat center center #147abf;
+}
+.mlh_input label.password{
+	background: url(../img/mlh_mdj_passWord.png) no-repeat center center #147abf;
+}
+.mlh_input input.yzm{
+	margin-right:5px;
+	padding: 0;
+	width: 138px;
+	height: 50px;
+	vertical-align: top;
+	text-align: center;
+}
+.mlh_input i{
+	width: 137px;
+	height: 48px;
+	display: inline-block;
+	cursor: pointer;
+}
+.mlh_login_btn{
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+	background: #147abf;
+	border-radius: 5px;
+	border:none;
+}
+.mlh_right .wx_address{
+	margin-left:0;
+	margin-right:5px;
+}
+.mlh_right .wx_address input{
+	width: 218px;
+	color: #7f8487;
+	padding: 0 5px;
+    border: 1px solid #ddd;
+    border-radius:5px 0 0 5px;
+}
+.mlh_right .wx_address>b{
+	 width:20px;
+	 height:30px;
+	 border: 1px solid #ddd;
+	 border-left: 0;
+	 border-radius:0 5px 5px 0;
+	 margin-top: 9px;
+	 background: url(../img/selctafter.png) no-repeat center;
+	 display: inline-block;
+	 float: right;
+	 cursor: pointer;
+}
+.zy_criterion_box .mlh_gy_con{
+	min-height: 550px;
+    height: 550px;
+}
+
+/*牡丹江头部公共样式*/
+.mlh_wrap{
+	margin: auto;
+	width: 1200px;
+}
+.mlh_headwrap{
+	width:100%;
+	min-width: 1200px;
+	height:66px;
+	line-height: 66px;
+	background: #fff;
+	box-shadow: 0 0 12px #ccc;
+}
+.mlh_headwrap .fr{
+	position: relative;
+	cursor: pointer;
+}
+.mlh_headwrap .fr:hover .personal{
+	display: block;
+}
+.mlh_headwrap .fr .personal{
+	display: none;
+	position: absolute;
+	width: 103px;
+	height: 28px;
+	top: 50px;
+	left: -30px;
+	border-radius: 3px;
+	 background: url(../img/mlh_tuichu_bg.png) no-repeat;
+	 background-size:cover;
+}
+.mlh_headwrap .fr .personal li {
+	width: 98px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	font-size: 1.2rem;
+}
+.mlh_headwrap .fr .personal span {
+	color: #222;
+	font-size: 12px;
+}
+.mlh_headwrap .fr .personal img.tuichu{
+	margin-top: 6px;
+}
+.mlh_logo{
+	margin-top:16px;
+	width:242px;
+	height: auto;
+	cursor: pointer;
+}
+.mlh_module{
+	margin-left: 62px;
+	font-size: 18px;
+	color: #5093e1;
+}
+.mlh_login_name{
+	position: relative;
+	color: #282a2c;
+}
+.mlh_login_name:before{
+	position: absolute;
+	left: -18px;
+	top: 24px;
+	display: block;
+	width: 0;
+	border:8px solid transparent;
+	border-left-color:#282a2c;
+	content: "";
+}
+.mlh_name{
+	margin-left: 12px;
+	font-size: 14px;
+	color: #282a2c;
+}
+.zyx_past{
+	color: #5093e1;
+    margin-left: 480px;
+    cursor: pointer;
+}
+/*班务公示*/
+.mlh_classNotice a:focus{
+	color: #282a2c;
+	text-decoration: none;
+}
+.mlh_classNotice a:hover{
+	color: #f97046;
+}
+.mlh_classNotice{
+    box-sizing: border-box;
+	min-height: 114px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+.mlh_classNotice .title{
+	padding-left:30px;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: 1px solid #ddd;
+}
+.mlh_classNotice .title a{
+	color: #f97046;
+}
+.mlh_classNotice .list{
+	margin: 0 30px;
+}
+.mlh_classNotice .list li{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 14px;
+	height: 66px;
+	border-bottom: 1px dashed #e0e2e4;
+}
+.mlh_classNotice .list .gongshi_left{
+    display: flex;
+    align-items: center;
+	line-height: 66px;
+    height: 66px;
+}
+.mlh_classNotice .list .gongshi{
+	display:inline-block;
+	width: 42px;
+	height: 22px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 12px;
+	color: #f97046;
+	border: 1px solid #f97046;
+	border-radius: 5px;
+}
+.mlh_classNotice .list .name{
+	display: inline-block;
+	margin-left:18px;
+	width: 200px;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.mlh_classNotice .list .time{
+	display: inline-block;
+	margin-left:18px;
+}
+.mlh_classNotice .list .iconfont{
+	padding-right:5px;
+}
+.mlh_classNotice .list .operation a{
+	display: inline-block;
+	margin-left:20px;
+}
+.mlh_classNotice .list .icon-bianji2{
+	font-size: 12px;
+}
+.mlh_publicDetails .details{
+	font-size: 16px;
+}
+.mlh_publicDetails .details p{
+	margin-top:10px;
+}
+.mlh_publicDetails .title{
+	color: #282a2c;
+}
+.mlh_publicDetails .details .title{
+	display: inline-block;
+	text-align: center;
+	border-bottom: none;
+}
+.mlh_publicDetails .details input{
+	color: #282a2c;
+}
+.mlh_publicDetails .details .mlh_upload li span,
+.mlh_publicDetails .details .mlh_upload li em{
+	font-size: 12px;
+}
+.mlh_publicDetails .details li>input[type=text]{
+	box-sizing: border-box;
+	padding-left:5px;
+	border:1px solid #cdd0d2;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #282a2c;
+}
+.mlh_publicDetails .details .timer{
+	margin-left:0;
+}
+.mlh_publicDetails .details .cont{
+	margin-top:30px;
+	margin-left:2em;
+	line-height: 2;
+}
+.mlh_publicDetails .details .cont span{
+	float: left;
+	font-size: 14px;
+}
+.mlh_publicDetails .details .cont span em{
+	color: #1479bf;
+}
+.mlh_publicDetails .details .cont time{
+	float: right;
+	font-size: 14px;
+}
+.mlh_publicDetails .details textarea{
+	box-sizing: border-box;
+	margin-left:6px;
+	border:1px solid #cdd0d2;
+	padding-left:5px;
+}
+.mlh_publicDetails .details .mlh_case{
+	margin-top:0;
+	margin-bottom: 0;
+	padding-left:0;
+}
+.mlh_publicDetails .details .mlh_upload{
+	margin-left:105px;
+	width: auto;
+}
+.mlh_publicDetails .details .editName{
+	box-sizing: border-box;
+	width: 600px;
+	padding-left:5px;
+	height: 28px;
+	line-height: 28px;
+	border:1px solid #cdd0d2;
+	border-radius: 5px;
+}
+.mlh_publicDetails .details textarea{
+	margin-top:10px;
+	width:690px;
+	height: 200px;
+}
+.mlh_publicDetails .details .edit_addFile{
+	margin-left:105px;
+}
+.mlh_publicDetails .details .edit_addFile strong.active{
+	display: inline-block;
+    width: 124px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    color: #399fdf;
+    font-style: normal;
+    text-align: center;
+    cursor: pointer;
+}
+.mlh_publicDetails .details .edit_addFile .icon-lianjielianlu{
+	font-size: 20px;
+	color: #282a2c;
+	cursor: pointer;
+}
+.mlh_publicDetails .details .mlh_add{
+	position: relative;
+	cursor: pointer;
+}
+.mlh_publicDetails .details .edit_button{
+	display: block;
+	margin: 20px auto;
+	width: 105px;
+	height: 32px;
+	line-height: 32px;
+	color: #fff;
+	background: #39a0de;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+/*特色活动*/
+.mlh_classActivity a:hover{
+	color: #1479bf;
+}
+.mlh_classActivity .title a{
+	color: #1479bf;
+}
+.mlh_classNotice .list .activity{
+	color: #1479bf;
+	border-color: #1479bf;
+}
+.mlh_classNotice .schoolActivity .time{
+	width: 110px;
+}
+.mlh_classNotice .schoolActivity .read{
+	display: inline-block;
+}
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td{
+	min-width: 30px;
+}
+/*安全管理首页*/
+.mlh_safeCont .title{
+	height: 15px;
+	line-height: 15px;
+	font-size: 16px;
+}
+.mlh_safetop{
+	margin-top:20px;
+}
+.mlh_safeCont .search{
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+}
+.mlh_safeCont .search .time{
+	float: left;
+	font-size: 12px;
+	color: #7f8487;
+}
+.mlh_safeCont .search .time p{
+	float: left;
+}
+.mlh_safeCont .more{
+	margin-top:10px;
+	float: right;
+}
+.mlh_safeCont .more a{
+	color: #282a2c;
+	font-size: 14px;
+}
+.mlh_safeCont .more .iconfont{
+	display: inline-block;
+	margin-left: -3px;
+	vertical-align: middle;
+	font-size: 22px;
+}
+.mlh_safeTab thead tr th{
+	height: 48px;
+	font-size: 14px;
+	color: #333;
+	background: #eaf2f6;
+}
+
+.mlh_table_userstic {
+	width: 100%;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.mlh_safeTab tbody tr td{
+	height: 43px;
+	color: #000;
+	border: 1px solid #ddd;
+}
+.mlh_safeTab tbody tr td .mlh_arrow{
+	vertical-align: middle;
+}
+.mlh_safeTab table thead th{
+	text-align: center;
+	font-weight: normal;
+	border: 1px solid #ddd;
+}
+.mlh_safeTab .normal{
+	color: #1abc9c;
+}
+.mlh_safeTab .abnormal{
+	color: #c72036;
+}
+.mlh_sateIndex{
+	padding:20px 0;
+	border-bottom: 1px solid #ddd;
+}
+.mlh_sateIndex .cont{
+	width: 580px;
+	height: 270px;
+	border-right: 1px solid #ddd;
+	overflow: hidden;
+}
+.mlh_sateIndex .left{
+	float: left;
+}
+.mlh_sateIndex .right{
+	float: left;
+	margin-left:40px;
+}
+.mlh_sateIndex .title{
+	height: 15px;
+	line-height: 15px;
+	font-size: 16px;
+}
+.mlh_sateIndex .pie{
+	margin-top:50px;
+}
+.mlh_sateIndex .pie p{
+	text-align: center;
+}
+.mlh_sateIndex .nodata{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 105px;
+	height: 105px;
+	line-height: 105px;
+	font-size: 12px;
+	text-align: center;
+	background: #e0e0e0;
+	border-radius: 50%;
+}
+.mlh_safeWrapper{
+	padding: 20px;
+	box-sizing: border-box;
+	background: #fff;
+}
+.mlh_safeWrapper .safe_title{
+	padding-bottom: 15px;
+	font-size: 16px;
+	border-bottom: 1px solid #efefef;
+}
+.mlh_safeWrapper .safe_title i{
+	display: inline-block;
+	margin-right:2px;
+	vertical-align: bottom;
+	width: 5px;
+	height: 20px;
+	border-left:5px solid #399fdf;
+}
+/*安全管理更多页面*/
+.mlh_today{
+	margin-top:20px;
+}
+/*健康管理首页*/
+.mlh_sateIndex .heart{
+	width: 430px;
+	height: 210px;
+	border-right: 1px solid #ddd;
+	overflow: hidden;
+}
+.mlh_sateIndex .heart img{
+	display: block;
+	margin: 0 auto;
+	margin-top:25px;
+	width: 91px;
+}
+.mlh_sateIndex .heart ul{
+	margin-top: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.mlh_sateIndex .heart ul li{
+	text-align: center;
+	line-height: 1.5;
+}
+.mlh_sateIndex .heart ul li:first-child{
+	margin-right: 20px;
+}
+.mlh_sateIndex .heart ul li:last-child{
+	margin-left: 20px;
+}
+.mlh_sateIndex .heart ul li span{
+	font-size: 18px;
+	color: #e60000;
+}
+.mlh_sateIndex .heart ul li:first-child span{
+	color: #36bb58;
+}
+.mlh_sateIndex .heart ul li p:first-of-type{
+	color: #333;
+}
+.mlh_sateIndex .step ul{
+	display: flex;
+	justify-content:space-around;
+}
+.mlh_sateIndex .step .pic{
+	margin-top:45px;
+}
+.mlh_sateIndex .step .text{
+	margin-left: 25px;
+	margin-top: 65px;
+}
+.mlh_sateIndex .step .text p:first-child{
+	color: #50a7e2;
+}
+.mlh_sateIndex .step .text p:first-child span{
+	font-size: 30px;
+}
+.mlh_sateIndex .step .text p:last-child{
+	font-size: 18px;
+	color: #666;
+}
+.mlh_sateIndex .step .data{
+	margin-left:45px;
+}
+.mlh_safetop .top{
+	margin-bottom: 20px;
+}

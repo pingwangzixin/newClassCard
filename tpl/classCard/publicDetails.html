@@ -1,0 +1,40 @@
+<div class="mlh_right mlh_publicDetails zmj_right">
+	<!--详情内容显示 start-->
+	<div class="zmj_publicDetails">
+		    <div class="zmj_classCardback">
+		        <span ng-click="cancel()"><i class="iconfont icon-web__bitebizuojiantou"></i>返回</span>
+	        </div>
+			<div class="zmj_classCardtitle">
+				<span>班牌管理</span>
+			</div>
+			<div class="list details">
+					<span class="title" ng-bind="variablePacket.title"></span>
+					<!--<p>各位同学，各位老师：  大家好，2017年校运动会即将开始。希望大家踊跃报名。</p>-->
+					<p class="cont" ng-bind="variablePacket.content">
+						<!-- 比赛日期：2012年10月20日。<br/>
+						 比赛地点：第一中学学院田径场。<br/>
+						 竞赛项目如下： <br/>
+						 男子组：100米 200米 400米 800米 3000米4x100米接力 4x400米接力 跳高 跳远 三级跳远 铅球<br/>
+						 女子组：100米 200米 400米 800米 4x100米接力 4x400米接力 跳高 跳远 铅球 铁饼 标枪 <br/>
+						  注：每班每项目限报两人，每人限报两项 -->
+					</p>
+					<!--<p class="cont">
+						各班班长于周二（2012年12月16日）上午12点之前把本班报名表发到： QQ：296342716 <br/>
+			        	手机：15261153031     *希望同学们积极报名，为校争光！
+					</p>-->
+					<div class="cont clearfix">
+						<!--<span>附件：<em>运动会报名表.docx</em></span>-->
+						<!--<span>附件：<em ng-bind="variablePacket.obj.enclosureName"></em></span>-->
+						<time ng-bind="variablePacket.obj.createDate"></time>
+						
+						<!--<ul class="fl">
+							<li class="clearfix ng-scope" ng-repeat="i in variablePacket.obj.enclosures">
+								<span ng-bind='i.enclosureName' ></span>
+							</li>
+						</ul>-->
+						
+					</div>
+			</div>
+	</div>		
+	<!--详情内容显示 end-->
+</div>

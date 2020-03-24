@@ -1,0 +1,49 @@
+<div>	
+	<!--返回 start-->
+	<div class="zmj_classCardback" ui-sref="secondNav.safeIndex">
+		<span><i class="iconfont icon-web__bitebizuojiantou"></i>返回</span>
+	</div>
+	<!--返回 end-->
+	<div class="mlh_safeWrapper mlh_safeCont">
+		<!--标题导航 start-->
+		<div class="safe_title">
+			<i></i>安全管理
+		</div>
+		<!--标题导航 end-->
+		<!--今日情况 start-->
+		<div class="mlh_today">
+			<p class="title">今日情况</p>
+			<div class="search clearfix">
+				<div class="time">
+					<p ng-repeat="i in todayData">
+						<span ng-bind="i.name"></span>
+						<span ng-bind="i.startTime"></span>-<span ng-bind="i.endTime"></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--今日情况 end-->
+		<!--表格 start-->
+		<div class="wx_userstatics_table mlh_safeTab">
+			<table class="mlh_table_userstic">
+				<thead>
+					<tr>
+						<th>时间</th>
+						<th>姓名</th>
+						<th>行为</th>
+						<th>表现</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="i in studentData">
+						<td ng-bind="i.time"></td>
+						<td ng-bind="i.stuName"></td>
+						<td ng-bind="i.behavior"></td>
+						<td ng-bind="i.type" class="normal" ng-class="{'abnormal':i.performance!='正常'}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--表格 end-->
+	</div>
+</div>

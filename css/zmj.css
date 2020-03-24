@@ -1,0 +1,73 @@
+body{ letter-spacing: 2px;background: #f1f2f3;}
+/*班牌开始*/
+.zmj_atmosphere_content{height: 458px;padding:0 30px;border-radius: 4px;background: #fff;border-top: 1px solid #ddd;}
+.zmj_atmosphere_show .zmj_atmosphere_title {font-size: 16px;text-align: center;line-height: 18px;margin-top: 30px;}
+.zmj_atmosphere_show .zmj_atmosphere_title .operation{font-size: 14px;color: #4f5355;float: right;cursor: pointer;}
+.zmj_atmosphere_show .zmj_atmosphere_title .iconfont{font-size: 18px;vertical-align: middle;}
+.zmj_atmosphere_show .zmj_atmosphere_title .operation:hover{color:#1479bf;}
+.zmj_atmosphere_show .zmj_atmosphere_img{margin-top: 25px;}
+.zmj_atmosphere_show .zmj_atmosphere_img img{width: 100%;height: 342px;}
+.zmj_atmosphere_editfile .zmj_file{padding: 24px 0;}
+.zmj_atmosphere_editfile  span{font-size: 14px;margin-right: 16px;}
+.zmj_echo_img img{width: 94px;height: 94px;margin-right: 10px;display: none;}
+.zmj_atmosphere_editfile .zmj_fileInput{position: relative;}
+.zmj_atmosphere_editfile .zmj_fileInput input{ position: absolute;left:0;top: 0;width: 94px;height: 94px;display: inline-block;opacity: 0;cursor: pointer;}
+.zmj_atmosphere_editfile .zmj_fileInput span{color:#de5566;font-size: 12px;margin-top:78px;margin-left:12px;float:right;}
+.zmj_atmosphere_editfile .icon-gantanhao{font-size: 14px;vertical-align: middle;}
+.zmj_atmosphere_editfile .zmj_edit{position: relative;}
+.zmj_atmosphere_editfile .zmj_edit textarea{width: 728px;height: 196px;padding:5px;border:1px solid #bbb;border-radius: 5px;}
+.zmj_atmosphere_editfile .zmj_edit .hint{position: absolute;right: 0;bottom: 0;color:#de5566;font-size: 12px;}
+.zmj_atmosphere_editfile .zmj_save{margin-top: 30px;text-align: center;}
+.zmj_atmosphere_editfile .zmj_save button{width: 106px;height: 32px;text-align: center;line-height: 32px;color:#fff;font-size: 14px;background:#399fdf;border:none;border-radius: 5px;cursor: pointer;}
+.zmj_master_content{padding:0 30px;border-radius: 4px;background: #fff;border-top: 1px solid #ddd;}
+.zmj_master_introduce{margin-top: 24px;}
+.zmj_master_introduce dl dt{width: 102px;height: 98px;border:1px solid #f1f2f3;margin-right: 20px;float: left;}
+.zmj_master_introduce dl dt img{width: 100%;height:100%;}
+.zmj_master_introduce dl dd{width: 1010px;float: right;}
+.zmj_master_introduce dl dd div{font-size: 14px;line-height: 24px;text-indent:42px}
+.zmj_master_text{padding-top: 24px;}
+.zmj_master_text input{width: 226px;height: 32px;font-size: 14px;padding: 0 10px;border:1px solid #bbb;border-radius: 5px;}
+.zmj_master_text span:last-child{margin-left: 12px;}
+.zmj_atmosphere_editfile .active input{border-color:#de5566;}
+.zmj_master_text span:last-child{font-size: 12px;color:#de5566;cursor: pointer;}
+.zmj_atmosphere_editfile .zmj_master_file{padding:18px 0;}
+.zmj_grade_content{height: 100%;padding:0 30px;border-radius: 4px;background: #fff;border-top: 1px solid #ddd;}
+.zmj_starStudent_content{border-radius: 4px;background: #fff;border-top: 1px solid #ddd;}
+.zmj_starStudent_content .zmj_atmosphere_title{padding-left:30px;padding-right: 30px;}
+.zmj_starStudent_content .zmj_atmosphere_editfile{height:476px;padding:0 30px;}
+.zmj_starStudent_list{margin-top: 20px;/*max-height: 680px;*/padding: 0 30px;}
+.zmj_starStudent_info{padding:20px 20px 20px 24px;border:1px dashed #eaeaea;border-radius: 4px;margin-bottom: 16px;}
+.zmj_starStudent_info dl dt{width: 199px;height: 155px;background: #2fc562;margin-right:20px;float: left;}
+.zmj_starStudent_info dl dt img{width: 100%;height: 100%;}
+.zmj_starStudent_info dd{width:870px;float: right;}
+.zmj_starStudent_info p>span{font-size:16px;}
+.zmj_starStudent_info p b{font-weight: normal;float: right;}
+.zmj_starStudent_info p b span{font-size: 12px;color: #4f5355;margin-left: 22px;cursor: pointer;}
+.zmj_starStudent_info p b .iconfont{vertical-align: -1px;}
+.zmj_starStudent_info p b span:hover{color:#1479bf;}
+.zmj_starStudent_info div{font-size: 14px;line-height: 30px;text-indent: 20px;margin-top: 10px;}
+.zmj_loginpromptBox div.gy_con{	width:300px;height:220px;text-align: center;} 
+.zmj_loginpromptBox div.gy_con div{margin-top: 20px;}
+.zmj_loginpromptBox div.gy_con p{ margin-top: 10px;font-size: 14px;}
+
+/*班牌头部*/
+.zmj_headwrap{width: 100%;height: 62px;line-height: 62px;background: #399fdf;}
+.zmj_headtop{width: 1200px;margin:0 auto;}
+.zmj_headtop .logo{margin-top: 19px;}
+.zmj_headcontent .surname{width: 40px;height:40px;font-size: 16px;color:#fff;text-align: center;line-height: 40px;border-radius: 100%;background: #4d5075;display: inline-block;}
+.zmj_headcontent .name{font-size: 16px;color: #fff;margin-left: 12px;}
+.zmj_headcontent .state{font-size: 12px;color: #fff;margin-left: 6px;display: inline-block;position: relative;cursor: pointer;}
+.zmj_headcontent .quit{width: 103px;height: 28px;line-height: 28px;border-radius: 3px;background: url(../img/mlh_tuichu_bg.png) no-repeat center;background-size:cover ;position: absolute;right: 0;top:50px;cursor: pointer;display: none;}
+.zmj_headcontent .quit img{margin:0 10px;margin-top: 7px;}
+.zmj_headcontent .quit b{color: #222;font-weight: normal;}
+.zmj_headcontent .state:hover  .quit{display: block;}
+.zmj_classCardback{height: 36px;line-height: 36px;font-size: 14px;color:#999;padding: 0 15px;border-bottom:1px solid  #efefef;background: #fafafa;}
+.zmj_classCardback span{cursor: pointer;}
+.zmj_classCardtitle{padding: 20px 18px 0;background: #fff;}
+.zmj_classCardtitle span{height: 18px;line-height: 18px;font-size: 16px;color:#222;border-left:4px solid #649ff4;padding-left: 8px;display: inline-block;}
+.zmj_publicDetails div.list{border-radius: inherit;}
+.zmj_publicDetails div.details{margin: 0;}
+.zmj_class_card_admin div.zyx_greenbox{border-top:none;}
+.zmj_class_card_admin div.zy_photo_details_wrap{border-top: none;}
+.zmj_right div.details{border-top:none;}
+

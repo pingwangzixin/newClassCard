@@ -1,0 +1,56 @@
+<div class="zy_class_card_admin">
+	<div class="zy_class_space_index">
+		<div class="zy_photo_wrap">
+			<div class="zy_introduce_tit clearfix" ng-if="variablePacket.userType=='class' || (variablePacket.userType=='school'&&variablePacket.userRights=='school')">
+				<!--<span>学校风采</span>-->
+				<strong ui-sref="secondNav.DemeanorEdit({'state':variablePacket.userType})" >
+					<i class="iconfont icon-jiahao"></i>
+					创建文件夹
+				</strong>
+			</div>
+			<ul class="zy_school_year_list">
+				<li class="zy_school_year" ng-repeat="i in variablePacket.albumArr">
+					<p class="zy_school_year_tit" ng-bind="i.stuYear">学年</p>
+					<ul class="zy_school_year_album clearfix">
+						<li ng-repeat="album in i.list">
+							<div class="zy_cover_photo" ui-sref="secondNav.DemeanorDetails({id:album.id,state:variablePacket.urlUser,power:variablePacket.urlPower})">
+								<img ng-src="{{album.src}}" err-src="./img/error152.png" />
+								<i ng-bind="album.count">张</i>
+							</div>
+							<div class="zy_cover_word">
+								<p class="zy_photo_tit" ng-bind="album.name"></p>
+								<p class="zy_photo_time" ng-bind="album.createDate">发表于</p>
+								<p class="zy_photo_oper" ng-if="variablePacket.userType=='class' || (variablePacket.userType=='school'&&variablePacket.userRights=='school')">
+									<span ng-click="deleteAlbum($index,album.id)">删除</span> |
+									<span ui-sref="secondNav.DemeanorEdit({state:variablePacket.urlUser,type:1,id:album.id})">编辑</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<!--<li class="zy_school_year">
+					<p class="zy_school_year_tit">2017-2018学年</p>
+					<ul class="zy_school_year_album clearfix">
+						<li>
+							<div class="zy_cover_photo">
+								<img src="./img/class_space_test1.png"/>
+								<i>55张</i>
+							</div>
+							<div class="zy_cover_word">
+								<p class="zy_photo_tit">运动会风采</p>
+								<p class="zy_photo_time">发表于2018-01-01</p>
+								<p class="zy_photo_oper">
+									<span>删除</span> |
+									<span>编辑</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</li>-->
+			</ul>
+		</div>
+	</div>
+	
+	<!--确认框及提示框-->
+	<prompt-box variable-packet="variablePacket" prompt-show="promptShow" wran-show="wranShow" del-ok="delOk"></prompt-box>
+</div>

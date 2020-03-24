@@ -1,0 +1,50 @@
+<div class="zy_class_card_admin zmj_class_card_admin">
+	
+	<div class="zy_class_space_index">
+		<div class="zy_photo_details_wrap">
+			<div class="zmj_classCardback">
+		           <span ng-click="cancel()"><i class="iconfont icon-web__bitebizuojiantou"></i>返回</span>
+	        </div>
+			<div class="zmj_classCardtitle">
+					<span>班牌管理</span>
+			</div>
+			<div class="zy_photo_show">
+				<!--<div class="zy_introduce_tit clearfix">
+					<b><<</b><span>学校风采</span>
+				</div>-->
+				 
+				<div class="zy_photo_show_details">
+					<p ng-bind="photoName"></p>
+					<div class="zy_album_pic_big">
+						<i class="iconfont icon-zuojiantoubeijing" ng-click="toLeft()"></i>
+						<div class="zy_pic_big_box">
+							<ul class="clearfix">
+								<li>
+									<img ng-src="{{variablePacket.mainImg}}" err-src="./img/error650.png" />
+								</li>
+							</ul>
+						</div>
+						<i class="iconfont icon-youjiantoubeijing" ng-click="toRight()"></i>
+					</div>
+					<div class="zy_album_pic_little">
+						<i class="iconfont icon-icon_arrow_left" ng-show="variablePacket.listToLeft" ng-click="listToLeft($event)"></i>
+						<div class="zy_pic_little_box">
+							<ul class="clearfix">
+								<li ng-class="{active:$index==variablePacket.photoState}" ng-repeat="photo in album" ng-click="photoSel($index)" view-album="albumEvent()" >
+									<img ng-src="{{photo.src}}" err-src="./img/error72.png" />
+								</li>
+							</ul>
+						</div>
+						<i class="iconfont icon-icon_arrow_right" ng-show="variablePacket.listToRight" ng-click="listToRight($event)"></i>
+					</div>
+				</div>
+			</div>
+			<!--<div class="zy_photo_brief">
+				<span>相簿描述：</span>
+				<div class="zy_photo_brief_word">
+					2010年9月25日下午1点整，我校第29届秋季运动会顺利召开了，我校同学奋勇向前，发扬不怕苦不怕累的优良作风，取得了优异成绩。看同学们洋溢着笑容的小脸，就知道他们早已忘记了寒风的凛冽。
+				</div>
+			</div>-->
+		</div>
+	</div>
+</div>
